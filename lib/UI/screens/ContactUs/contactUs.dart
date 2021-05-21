@@ -1,10 +1,12 @@
 import 'package:compound_app/UI/AppImages/appImages.dart';
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/AccountSettings/accountSettings.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:compound_app/UI/sharedWidgets/subTitle.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ContactUsScreen extends StatelessWidget {
   @override
@@ -79,7 +81,9 @@ class ContactUsScreen extends StatelessWidget {
               height: 15,
             ),
             ActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(AccountSettingsScreen());
+              },
               label: 'submit',
             ),
           ],

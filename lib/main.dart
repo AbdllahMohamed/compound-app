@@ -1,3 +1,4 @@
+import 'package:compound_app/UI/appColors/appColors.dart';
 import 'package:compound_app/UI/screens/login/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.latoTextTheme(),
+        primaryColor: AppColor.primaryColor,
       ),
       home: LoginScreen(),
     );

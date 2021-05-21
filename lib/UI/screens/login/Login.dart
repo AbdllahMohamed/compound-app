@@ -1,4 +1,6 @@
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/AccountSettings/accountSettings.dart';
+import 'package:compound_app/UI/screens/bottomNavigation/bottomNavigation.dart';
 import 'package:compound_app/UI/screens/signupStepOne/signupStepOne.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
@@ -85,7 +87,7 @@ class LoginScreen extends StatelessWidget {
             ActionButton(
               label: 'Sign Up',
               onPressed: () {
-                Get.to(SignUpStepOneScreen());
+                Get.to(BottomNavigation());
               },
             ),
             SizedBox(
