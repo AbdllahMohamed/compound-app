@@ -1,14 +1,14 @@
+import 'package:compound_app/UI/screens/SignupWaitingForConfirmation/SignupWaitingForConfirmation.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:compound_app/UI/appColors/appColors.dart';
 import 'package:compound_app/UI/sharedWidgets/subTitle.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
+import 'package:get/get.dart';
 import 'package:international_phone_input/international_phone_input.dart';
 
 class SignUpStepThreeScreen extends StatefulWidget {
-  static const routeName = '/signupStepThree';
-
   @override
   _SignUpStepThreeScreenState createState() => _SignUpStepThreeScreenState();
 }
@@ -216,14 +216,14 @@ class _SignUpStepThreeScreenState extends State<SignUpStepThreeScreen> {
                       ),
                       child: new RichText(
                         text: new TextSpan(
-                          text: 'By clicking the Submit , you agree to our \n',
+                          text: 'By clicking the Submit , you agree to our',
                           style: TextStyle(
                             color: AppColor.hintsColor,
                             fontSize: 16,
                           ),
                           children: <TextSpan>[
                             new TextSpan(
-                              text: 'Terms and Conditions ',
+                              text: ' Terms and Conditions ',
                               style: TextStyle(
                                 color: AppColor.primaryColor,
                                 fontSize: 16,
@@ -251,8 +251,7 @@ class _SignUpStepThreeScreenState extends State<SignUpStepThreeScreen> {
             ActionButton(
               label: 'Next',
               onPressed: () {
-                // Navigator.of(context)
-                //     .pushNamed(SignupWaitingForConfirmationScreen.routeName);
+                Get.to(SignupWaitingForConfirmationScreen());
               },
             ),
             SizedBox(

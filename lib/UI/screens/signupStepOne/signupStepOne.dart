@@ -1,24 +1,19 @@
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/signupStepTwo/signupStepTwo.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/subTitle.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignUpStepOneScreen extends StatefulWidget {
-  static const routeName = '/signupStepOne';
-
   @override
   _SignUpStepOneScreenState createState() => _SignUpStepOneScreenState();
 }
 
 class _SignUpStepOneScreenState extends State<SignUpStepOneScreen> {
-  List<String> _projects = [
-    'Project A',
-    'Project B',
-    'Project C',
-    'Project D'
-  ]; // Option 2
+  List<String> _projects = ['Project A', 'Project B', 'Project C', 'Project D'];
   String _selectedproject = 'Project ';
   @override
   Widget build(BuildContext context) {
@@ -109,9 +104,9 @@ class _SignUpStepOneScreenState extends State<SignUpStepOneScreen> {
             ),
             ActionButton(
               label: 'Next',
-              // onPressed: () {
-              //   Navigator.of(context).pushNamed(SignUpStepTwoScreen.routeName);
-              // },
+              onPressed: () {
+                Get.to(SignUpStepTwoScreen());
+              },
             ),
             SizedBox(
               height: 10,

@@ -1,12 +1,13 @@
 import 'package:compound_app/UI/screens/login/Login.dart';
+import 'package:compound_app/UI/screens/signupStepThree/signupStepThree.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:compound_app/UI/appColors/appColors.dart';
 import 'package:compound_app/UI/sharedWidgets/subTitle.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
+import 'package:get/route_manager.dart';
 
 class SignUpStepTwoScreen extends StatelessWidget {
-  static const routeName = '/signupStepTwo';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +38,7 @@ class SignUpStepTwoScreen extends StatelessWidget {
               label: 'Owner',
               subLabel: 'I am the owner of this unit',
               onTap: () {
-                // Navigator.of(context)
-                //     .pushNamed(SignUpStepThreeScreen.routeName);
+                Get.to(SignUpStepThreeScreen());
               },
             ),
             RegisterType(

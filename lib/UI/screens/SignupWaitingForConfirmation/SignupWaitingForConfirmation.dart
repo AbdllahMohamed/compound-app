@@ -1,10 +1,11 @@
 import 'package:compound_app/UI/AppImages/appImages.dart';
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/ReportIssue/ReportIssue.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignupWaitingForConfirmationScreen extends StatelessWidget {
-  static const routeName = '/SignupWaitingForConfirmationScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +82,7 @@ class SignupWaitingForConfirmationScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                // Navigator.of(context).pushNamed(ReportIssueScreen.routeName);
+                Get.to(ReportIssueScreen());
               },
               child: Text(
                 'Call us',

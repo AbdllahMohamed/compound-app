@@ -1,14 +1,15 @@
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/signupStepOne/signupStepOne.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 var devicewidth;
 var deviceHeight;
 
 class LoginScreen extends StatelessWidget {
-  static const routeName = '/login';
   @override
   Widget build(BuildContext context) {
     devicewidth = MediaQuery.of(context).size.width;
@@ -84,7 +85,7 @@ class LoginScreen extends StatelessWidget {
             ActionButton(
               label: 'Sign Up',
               onPressed: () {
-                // Navigator.of(context).pushNamed(SignUpStepOneScreen.routeName);
+                Get.to(SignUpStepOneScreen());
               },
             ),
             SizedBox(

@@ -1,11 +1,12 @@
 import 'package:compound_app/UI/AppImages/appImages.dart';
 import 'package:compound_app/UI/appColors/appColors.dart';
+import 'package:compound_app/UI/screens/ContactUs/contactUs.dart';
 import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ReportIssueScreen extends StatelessWidget {
-  static const routeName = '/reportissuescreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +60,9 @@ class ReportIssueScreen extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Get.to(ContactUsScreen());
+              },
               child: Text(
                 'Call us',
                 style: TextStyle(
