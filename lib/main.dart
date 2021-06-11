@@ -1,8 +1,8 @@
 import 'package:compound_app/UI/appColors/appColors.dart';
-import 'package:compound_app/UI/screens/login/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'UI/screens/splash/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.latoTextTheme(),
         primaryColor: AppColor.primaryColor,
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }

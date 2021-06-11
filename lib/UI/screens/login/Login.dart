@@ -1,6 +1,4 @@
 import 'package:compound_app/UI/appColors/appColors.dart';
-import 'package:compound_app/UI/screens/AccountSettings/accountSettings.dart';
-import 'package:compound_app/UI/screens/bottomNavigation/bottomNavigation.dart';
 import 'package:compound_app/UI/screens/signupStepOne/signupStepOne.dart';
 import 'package:compound_app/UI/sharedWidgets/actionButton.dart';
 import 'package:compound_app/UI/sharedWidgets/title.dart';
@@ -8,13 +6,13 @@ import 'package:compound_app/UI/sharedWidgets/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-var devicewidth;
+var deviceWidth;
 var deviceHeight;
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    devicewidth = MediaQuery.of(context).size.width;
+    deviceWidth = MediaQuery.of(context).size.width;
     deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
@@ -87,7 +85,7 @@ class LoginScreen extends StatelessWidget {
             ActionButton(
               label: 'Sign Up',
               onPressed: () {
-                Get.to(BottomNavigation());
+                Get.to(SignUpStepOneScreen());
               },
             ),
             SizedBox(

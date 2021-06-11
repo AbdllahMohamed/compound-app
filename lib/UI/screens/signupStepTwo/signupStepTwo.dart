@@ -87,7 +87,7 @@ class RegisterType extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-            width: devicewidth * 0.9,
+            width: deviceWidth * 0.9,
             height: 80,
             alignment: Alignment.center,
             decoration: BoxDecoration(

@@ -15,8 +15,8 @@ class ActionButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             primary: AppColor.primaryColor,
             minimumSize: Size(
-              devicewidth * 0.88,
-              50,
+              deviceWidth * 0.88,
+              60,
             )),
         child: Text(
           label,
