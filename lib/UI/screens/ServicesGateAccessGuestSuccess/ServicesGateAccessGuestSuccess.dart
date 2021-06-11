@@ -133,62 +133,63 @@ class _ServicesGateAccessGuestSuccessState
                       ),
                     ],
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 40,
-                      ),
-                      TitleWidget(
-                        label: 'Services',
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      SubTitle(
-                        label: 'Gate access for guest',
-                      ),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      Center(child: Image.asset(AppImages.appColorCheck)),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Center(
-                        child: Text(
-                          'Access code',
-                          style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.primaryColor,
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                        ),
+                        TitleWidget(
+                          label: 'Services',
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SubTitle(
+                          label: 'Gate access for guest',
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Center(child: Image.asset(AppImages.appColorCheck)),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Center(
+                          child: Text(
+                            'Access code',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: AppColor.primaryColor,
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Center(
-                        child: Text(
-                          '124795873sa',
-                          style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.primaryColor,
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Center(
+                          child: Text(
+                            '124795873sa',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: AppColor.primaryColor,
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ActionButton(
-                        label: 'share access code with your guest',
-                        onPressed: () {},
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                    ],
+                        SizedBox(
+                          height: 20,
+                        ),
+                        ActionButton(
+                          label: 'share access code with your guest',
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

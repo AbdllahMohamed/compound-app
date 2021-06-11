@@ -23,5 +23,5 @@ class AppImages {
   static String appCash = 'assets/images/cash.png';
   static String appCreditCard = 'assets/images/creditCard.png';
   static String appRefresh = 'assets/images/refresh.png';
-  static String appLogoWhite = 'assets/images/logoWhite.png';
+  static String appLogoWhite = 'assets/images/logowhite.png';
 }

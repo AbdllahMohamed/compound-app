@@ -102,11 +102,11 @@ class _SignUpStepThreeScreenState extends State<SignUpStepThreeScreen> {
                 onPhoneNumberChange: onPhoneNumberChange,
                 initialPhoneNumber: phoneNumber,
                 initialSelection: phoneIsoCode,
-                hintText: 'Mobile',
+                decoration: InputDecoration(
+                  hintText: 'Mobile',
+                ),
                 hintStyle: TextStyle(color: AppColor.hintsColor),
                 enabledCountries: ['+20', '+1', '+20'],
-                border: UnderlineInputBorder(),
-                decoration: InputDecoration(border: UnderlineInputBorder()),
               ),
             ),
             Padding(

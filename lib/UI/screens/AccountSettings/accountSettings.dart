@@ -123,9 +123,8 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                       ),
                     ],
                   ),
-                  SafeArea(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  Expanded(
+                    child: ListView(
                       children: [
                         SizedBox(
                           height: 30,
@@ -218,9 +217,13 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                             // onPhoneNumberChange: onPhoneNumberChange,
                             // initialPhoneNumber: phoneNumber,
                             // initialSelection: phoneIsoCode,
-                            hintText: 'Mobile',
-                            hintStyle: TextStyle(color: AppColor.primaryColor),
-                            enabledCountries: ['+20', '+1', '+20'],
+                            decoration: InputDecoration(
+                              hintText: 'Mobile',
+                            ),
+                            hintStyle: TextStyle(color: AppColor.hintsColor),
+                            enabledCountries: [
+                              '+20',
+                            ],
                           ),
                         ),
                         SizedBox(

@@ -4,6 +4,7 @@ import 'package:compound_app/UI/appColors/appColors.dart';
 import 'package:compound_app/UI/screens/MyRequsets/myRequsets.dart';
 import 'package:compound_app/UI/screens/community/community.dart';
 import 'package:compound_app/UI/screens/home/home.dart';
+import 'package:compound_app/UI/screens/login/Login.dart';
 import 'package:compound_app/UI/screens/servicesGateAccessGuest/servicesGateAccessGuest.dart';
 import 'package:flutter/material.dart';
 import 'package:compound_app/UI/appDrawer/appDrawer.dart';
@@ -135,55 +136,92 @@ class _ServicesScreenState extends State<ServicesScreen> {
                   SubTitle(
                     label: 'Gate access',
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppColor.hintsColor,
+
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: AppColor.hintsColor,
+                                ),
+                              ),
+                              child: Image.asset(AppImages.appBarCode)),
                         ),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(AppImages.appBarCode),
-                          InkWell(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(AppImages.appRefresh),
-                                SizedBox(
-                                  width: 8,
+                        InkWell(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(AppImages.appRefresh),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Text(
+                                'Refresh',
+                                style: TextStyle(
+                                  color: AppColor.primaryColor,
+                                  fontSize: 20,
                                 ),
-                                Text(
-                                  'Refresh',
-                                  style: TextStyle(
-                                    color: AppColor.primaryColor,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        ActionButton(
+                          label: 'Access For Guest',
+                          onPressed: () {
+                            Get.to(ServicesGateAccessGuest());
+                          },
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                      ],
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  ActionButton(
-                    label: 'Access For Guest',
-                    onPressed: () {
-                      Get.to(ServicesGateAccessGuest());
-                    },
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
+
+                  // Padding(
+                  //   padding: const EdgeInsets.all(20.0),
+                  //   child: Container(
+                  //     height: deviceHeight * 0.7,
+                  //     decoration: BoxDecoration(
+                  //       border: Border.all(
+                  //         color: AppColor.hintsColor,
+                  //       ),
+                  //     ),
+                  //     child: ListView(
+                  //       // crossAxisAlignment: CrossAxisAlignment.center,
+                  //       children: [
+                  //         Image.asset(AppImages.appBarCode),
+                  //         InkWell(
+                  //           child: Row(
+                  //             mainAxisAlignment: MainAxisAlignment.center,
+                  //             children: [
+                  //               Image.asset(AppImages.appRefresh),
+                  //               SizedBox(
+                  //                 width: 8,
+                  //               ),
+                  //               Text(
+                  //                 'Refresh',
+                  //                 style: TextStyle(
+                  //                   color: AppColor.primaryColor,
+                  //                   fontSize: 20,
+                  //                 ),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 10,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
